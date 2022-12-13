@@ -9,7 +9,9 @@ function NumberCounter() {
         <span>짝수입니다.</span>
       </>
     ) : (
-      <></>
+      <>
+        <span>홀수입니다.</span>
+      </>
     );
 
   return (
@@ -19,6 +21,14 @@ function NumberCounter() {
       <button onClick={() => setNo(no + 1)}>증가</button>
       <hr />
       {noIsEvenDiv}
+      <hr />
+      {no % 8 == 0 ? (
+        <>
+          <span>8의 배수입니다.</span>
+        </>
+      ) : (
+        <></>
+      )}
     </>
   );
 }
